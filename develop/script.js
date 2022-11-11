@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "L", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",]
-var special = ["!", "@", "#", "$", "%", "^", "&", "*",]
+var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_"]
 
 // Write password to the #password input
 function writePassword(characters) {
@@ -41,7 +41,7 @@ function writePassword(characters) {
 
 
   if (prompt1) {
-    password = [lower1, upper1];
+    password = [lower1];
   }
 
   if (prompt2 && prompt1) {
@@ -90,7 +90,10 @@ console.log(complete)
 
   console.log(password);
   console.log(pass1);
+  var finalPassword = document.getElementById("password");
+  finalPassword.innerHTML = complete
 }
+
 
 
 // Add event listener to generate button
